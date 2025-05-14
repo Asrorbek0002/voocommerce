@@ -2,9 +2,9 @@ from django.contrib import admin
 
 from products.models import *
 
+
 class ProductVariantInline(admin.TabularInline):
     model = ProductVariant
-
 
 
 @admin.register(Product)
@@ -24,11 +24,13 @@ class BrandAdmin(admin.ModelAdmin):
     list_display_links = ("id", "name")
     search_fields = ("name",)
 
+
 @admin.register(Category)
 class Category(admin.ModelAdmin):
     list_display = ("id", "name")
     list_display_links = ("id", "name")
     search_fields = ("name",)
+
 
 @admin.register(Size)
 class SizeAdmin(admin.ModelAdmin):
@@ -36,13 +38,9 @@ class SizeAdmin(admin.ModelAdmin):
     list_display_links = ("id", "name")
     search_fields = ("name",)
 
+
 @admin.register(Color)
 class ColorAdmin(admin.ModelAdmin):
     list_display = ("id", "name")
     list_display_links = ("id", "name")
     search_fields = ("name",)
-
-
-
-
-

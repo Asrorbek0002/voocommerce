@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 
+
 from accounts.manage import UserManager
 from common.models import BaseModel
 
@@ -23,3 +24,21 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
 
     def __str__(self):
         return self.email
+
+class Cart(BaseModel):
+    user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return str(self.user)
+
+
+class CartItem(BaseModel):
+    cart = models.ForeignKey(Cart, on_delete=models.RESTRICT, null=True, blank=True)
+    product = models.ForeignKey('products.ProductVariant', on_delete=models.RESTRICT, null=True, blank=True)
+    quantity = models.IntegerField(null=False, blank=False)
+
+    def __str__(self):
+        return f"CartItem({self.id}"
+
+
+

@@ -10,10 +10,10 @@ class Product(BaseModel):
     slug = models.SlugField(null=False, blank=False, unique=True)
     default_images = models.ManyToManyField('common.MediaFile', blank=True)
     is_active = models.BooleanField(default=True)
-    category_id = models.ForeignKey('products.Category', on_delete=models.SET_NULL, null=True,  blank=True)
+    category = models.ForeignKey('products.Category', on_delete=models.SET_NULL, null=True,  blank=True)
 
     def __str__(self):
-        return f" {self.name} - {self.price}"
+        return f" {self.name}"
 
 
 class ProductVariant(BaseModel):
@@ -27,7 +27,7 @@ class ProductVariant(BaseModel):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return f" {self.product.name} - {self.price}"
+        return f" {self.product.name}"
 
 
 class Brand(BaseModel):

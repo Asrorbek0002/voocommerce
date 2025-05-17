@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 
-from django.conf.global_settings import AUTH_USER_MODEL, MEDIA_ROOT, MEDIA_URL
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -56,6 +56,9 @@ LOCAL_APPS = [
 
 EXTERNAL_APPS = [
     "rest_framework",
+    "rest_framework_simplejwt",
+    "drf_yasg",
+    "jazzmin",
 ]
 
 INSTALLED_APPS = LOCAL_APPS + EXTERNAL_APPS + DJANGO_APPS
@@ -103,6 +106,32 @@ DATABASES = {
         "PORT": os.getenv("DB_PORT"),
     }
 }
+
+# REST Framework Settings
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':(
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES':(
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
+
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS':{
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'descrition': 'JWT Authorization header. Example: Bearer <your_token>',
+        },
+    },
+    'USE_SESSION_AUTH': False,
+}
+
 
 
 # Password validation

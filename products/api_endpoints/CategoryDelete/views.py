@@ -6,7 +6,7 @@ class CategoryDeleteAPIView(DestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategoryDeleteSerializer
 
-    def Delete(self, request, *args, **kwargs):
+    def delete(self, request, *args, **kwargs):
         return super().delete(request, *args, **kwargs)
 
 

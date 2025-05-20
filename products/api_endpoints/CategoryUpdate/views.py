@@ -7,5 +7,5 @@ class CategoryUpdateAPIView(UpdateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategoryUpdateSerializer
 
-    def Update(self, request, *args, **kwargs):
+    def update(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)

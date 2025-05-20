@@ -8,7 +8,7 @@ class CategoryCreateAPIView(CreateAPIView):
     serializer_class = CategoryCreateSerializer
 
 
-    def Create(self, request, *args, **kwargs):
+    def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
 
 

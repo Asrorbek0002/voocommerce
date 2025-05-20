@@ -40,11 +40,12 @@ class ProductVariant(BaseModel):
         return f" {self.product.name}"
 
 
+
+
 class Brand(BaseModel):
     name = models.CharField(max_length=255, null=False, blank=False)
     slug = models.SlugField(null=False, blank=False, unique=True)
     logo = models.ImageField(upload_to="brands", null=True, blank=True)
-
     def __str__(self):
         return self.name
 

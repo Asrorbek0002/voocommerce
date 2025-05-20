@@ -11,7 +11,7 @@ urlpatterns = [
     path('list2/', ProductListAPIView2.as_view(), name = "product-list2"),
     path('list3/', ProductListView3.as_view(), name = "product-list3"),
 
-    path('categories/',CategoryListView.as_view(), name = "category-list" ),
+    path('categories/',CategoryListAPIView.as_view(), name = "category-list" ),
     path('categories/create/', CategoryCreateAPIView.as_view(), name = "category-create"),
     path('categories/<str:slug>/', CategoryRetrieveAPIView.as_view(), name = "category-retrieve"),
     path('categories/<str:slug>/update/', CategoryUpdateAPIView.as_view(), name = "category-update"),

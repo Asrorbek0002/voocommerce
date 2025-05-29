@@ -1,7 +1,7 @@
 from django.urls import path
 
 from common.api_endpoints import *
-from common.views import HomeView, ContactView, ShoppingCartView
+from common.views import HomeView, ContactView, ShoppingCartView, ProfileView
 
 app_name = "common"
 
@@ -11,7 +11,9 @@ urlpatterns = [
 
     path("index/", HomeView.as_view(), name='index'),
     path('contact/', ContactView.as_view(), name = "contact"),
-    path("cart/", ShoppingCartView.as_view(), name = "shopping-cart")
+    path("cart/", ShoppingCartView.as_view(), name = "shopping-cart"),
+    path('profile/', ProfileView.as_view(), name = "profile")
+
 ]
 
 

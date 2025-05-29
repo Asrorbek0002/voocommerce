@@ -1,15 +1,27 @@
 from django.urls import path
 
 from products.api_endpoints import *
-from products.api_endpoints.CategoryCreate.views import CategoryCreateAPIView
-from products.api_endpoints.CategoryDelete.views import CategoryDeleteAPIView
-from products.api_endpoints.CategoryUpdate.views import CategoryUpdateAPIView
+
+
 
 urlpatterns = [
+    path('', ProductListAPIView.as_view(), name = "product-list"),
+    path('create/', ProductCreateAPIView.as_view(), name = 'product-create' ),
+    path('<str:slug>/', ProductRetrieveAPIView.as_view(), name = 'product-retrieve'),
+    path('<str:slug>/update/', ProductUpdateAPIView.as_view(), name = 'product-update'),
+    path('<str:slug>/delete/', ProductDeleteAPIView.as_view(), name = 'product-delete'),
 
-    path('list1/', ProductListAPIView1.as_view(), name = "product-list"),
-    path('list2/', ProductListAPIView2.as_view(), name = "product-list2"),
-    path('list3/', ProductListView3.as_view(), name = "product-list3"),
+    path('brands/', BrandListAPIView.as_view(), name = 'brand-list'),
+    path('brands/create/', BrandCreateAPIView.as_view(), name = 'brand-create'),
+    path('brands/<str:slug>/', BrandRetrieveAPIView.as_view(), name = 'brand-retrieve'),
+    path('brands/<str:slug>/update/', BrandUpdateAPIView.as_view(), name = 'brand-update'),
+    path('brands/<str:slug>/delete/', BrandDeleteAPIView.as_view(), name = 'brand-delete'),
+
+    path('sizes/', SizeListCreateAPIView.as_view(), name = 'size-list-create'),
+    path('sizes/<int:pk>', SizeRetrieveUpdateDestroyView.as_view(), name = 'size-detail'),
+
+    path('colors/', ColorListCreateView.as_view(), name = 'color-list-create'),
+    path('color/<int:pk>/', ColorRetrieveUpdateDestroyView.as_view(), name = 'color-detail'),
 
     path('categories/',CategoryListAPIView.as_view(), name = "category-list" ),
     path('categories/create/', CategoryCreateAPIView.as_view(), name = "category-create"),

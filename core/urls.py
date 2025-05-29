@@ -47,6 +47,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name = 'token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name = 'token_refresh'),
+    path('common/', include('common.urls')),
     path('products/', include('products.urls')),
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
@@ -58,12 +59,8 @@ urlpatterns = [
 
 
 
-static_media_urls = static(
-    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
-) + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
-urlpatterns += static_media_urls
 
 
 

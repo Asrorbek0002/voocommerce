@@ -1,6 +1,12 @@
 from rest_framework import serializers
 
-from products.models import Product
+from products.models import Product, Category
+
+
+class CategoryProductListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ["id", "name", "slug"]
 
 
 class ProductListSerializer(serializers.ModelSerializer):

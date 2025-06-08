@@ -6,7 +6,9 @@ click==8.2.0
 colorama==0.4.6
 coreapi==2.3.3
 coreschema==0.0.4
+crispy-bootstrap4==2025.6
 Django==5.2.1
+django-crispy-forms==2.4
 django-jazzmin==3.0.1
 django-rest-swagger==2.2.0
 djangorestframework==3.16.0

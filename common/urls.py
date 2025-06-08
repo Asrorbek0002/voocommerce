@@ -9,7 +9,7 @@ urlpatterns = [
     path("media/upload/", MediaFileCreateAPIView.as_view(), name = "media-upload"),
     path("media/delete/<int:id>/", MediaFileDestroyAPIView.as_view(), name = "media-delete"),
 
-    path("index/", HomeView.as_view(), name='index'),
+    path("", HomeView.as_view(), name='index'),
     path('contact/', ContactView.as_view(), name = "contact"),
     path("cart/", ShoppingCartView.as_view(), name = "shopping-cart"),
     path('profile/', ProfileView.as_view(), name = "profile")

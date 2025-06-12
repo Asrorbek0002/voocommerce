@@ -27,7 +27,10 @@ urlpatterns = [
     path('categories/create/', CategoryCreateAPIView.as_view(), name = "category-create"),
     path('categories/<str:slug>/', CategoryRetrieveAPIView.as_view(), name = "category-retrieve"),
     path('categories/<str:slug>/update/', CategoryUpdateAPIView.as_view(), name = "category-update"),
-    path('categories/<str:slug>/delete/', CategoryDeleteAPIView.as_view(), name = "category-delete")
+    path('categories/<str:slug>/delete/', CategoryDeleteAPIView.as_view(), name = "category-delete"),
+
+    path('reviews/create/', ReviewCreateAPIView.as_view(), name = "review-create"),
+    path('reviews/delete/<int:id>/', ReviewDeleteAPIView.as_view(), name = "review-delete")
 ]
 
 

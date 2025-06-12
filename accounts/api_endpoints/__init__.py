@@ -6,3 +6,7 @@ from .CartItemUpdate import *
 from .CartItemDelete import *
 from .Profile import *
 from .Register import *
+from .SeveProduct import *
+from .SavedProductList import *
+
+

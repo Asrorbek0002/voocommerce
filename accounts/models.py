@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 from accounts.manage import UserManager
@@ -14,6 +15,7 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
     last_name = models.CharField(max_length=30, null=True, blank=True)
     avatar = models.ImageField(upload_to="avatars", null=True, blank=True)
     bio = models.TextField(null=True, blank=True)
+    saved_products = models.ManyToManyField("products.Product", related_name="saved_by_user")
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
@@ -23,7 +25,14 @@ class User(AbstractBaseUser, PermissionsMixin, BaseModel):
     REQUIRED_FIELDS = []
 
     def __str__(self):
-        return self.email
+            return self.email
+
+    class Meta:
+        verbose_name = _("User")
+        verbose_name_plural = _("Users")
+
+
+
 
 class Cart(BaseModel):
     user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True, blank=True)

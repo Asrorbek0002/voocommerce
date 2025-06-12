@@ -10,3 +10,4 @@ class LoginView(TemplateView):
         context['title'] = 'VooCommerce | Login'
         context['form'] = LoginForm()
         return context
+

@@ -27,6 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-l4_xz8-y2^72#x(n8!j4tc%qi7#%%c@3nnz+cd0mnqv+*!yp7e"
+#SECRET_KEY = os.getenv("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -63,6 +65,7 @@ EXTERNAL_APPS = [
     "crispy_bootstrap4",
     "rosetta",
     "modeltranslation",
+    "django_celery_beat",
 
 
 ]

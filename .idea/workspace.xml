@@ -5,21 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e01ada00-0398-42c2-8401-373f4c1241dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/celery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/translation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/api_endpoints/Checkout/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/api_endpoints/Checkout/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/api_endpoints/Checkout/services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/api_endpoints/Checkout/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/api_endpoints/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/Uzum/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/CreateTransaction/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/CreateTransaction/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/CreateTransaction/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/PerformTransaction/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/PerformTransaction/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/PerformTransaction/services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/PerformTransaction/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/WooPay/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/api_endpoints/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payments/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryCreate/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryCreate/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryCreate/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryDelete/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryDelete/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryList/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryList/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryList/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryUpdate/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryUpdate/serialiers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/StoryUpdate/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/api_endpoints/Story/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/api_endpoints/Profile/PasswordReset/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/api_endpoints/Profile/PasswordReset/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/email_send.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/email_send.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/ru/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/ru/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/uz/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/uz/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/uz/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/uz/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/payments/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/payments/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentCreate/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentCreate/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentCreate/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentCreate/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentCreate/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentCreate/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentDelete/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentDelete/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentDelete/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentDelete/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentList/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/ReviewCommentList/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/ReviewComment/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/Size/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/Size/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/api_endpoints/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/api_endpoints/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +82,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2ydSbb9sp6HAGSUhlfvPfKWL8hc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

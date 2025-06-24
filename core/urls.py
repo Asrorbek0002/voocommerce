@@ -49,6 +49,8 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name = 'token_refresh'),
     path('common/', include('common.urls')),
     path('products/', include('products.urls')),
+    path("orders/", include("orders.urls")),
+    path("payments/", include("payments.urls")),
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
     # Swagger and Redoc URLs

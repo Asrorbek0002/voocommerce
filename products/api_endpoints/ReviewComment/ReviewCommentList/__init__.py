@@ -1,1 +1,5 @@
-from .views import *
+from .views import UserReviewsListAPIView, UserCommentListAPIView
+
+__all__ = ['UserReviewsListAPIView', 'UserCommentListAPIView']
+
+

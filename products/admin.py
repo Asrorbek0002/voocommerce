@@ -2,7 +2,17 @@ from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
 
-from products.models import *
+from products.models import (Product,
+                            ProductVariant,
+                            Brand,
+                            Category,
+                            Size,
+                             Color,
+                             Review,
+                             Comment,
+                             Story,)
+
+
 
 
 class ProductVariantInline(admin.TabularInline):
@@ -83,7 +93,13 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ("user__email",)
 
 
+@admin.register(Story)
+class StoryAdmin(admin.ModelAdmin):
+    list_display = ("id", "title", "product", "image")
+    list_display_links = ("id", "title")
+    search_fields = ("title", "product")
 
+    fieldsets = ((_("Main"), {"fields": ("title", "product", "image")}),)
 
 
 

@@ -19,7 +19,40 @@ from .Size import *
 
 from .ReviewComment import *
 
+from .Story import *
 
+__all__ = [
+    "BrandCreateAPIView",
+    "BrandListAPIView",
+    "BrandUpdateAPIView",
+    "BrandDeleteAPIView",
+    "BrandRetrieveAPIView",
+    "CategoryListAPIView",
+    "CategoryCreateAPIView",
+    "CategoryUpdateAPIView",
+    "CategoryDeleteAPIView",
+    "CategoryRetrieveAPIView",
+    "ProductCreateAPIView",
+    "ProductListAPIView",
+    "ProductUpdateAPIView",
+    "ProductDeleteAPIView",
+    "ProductRetrieveAPIView",
+    "SizeListCreateAPIView",
+    "SizeRetrieveUpdateDestroyView",
+    "ColorListCreateView",
+    "ColorRetrieveUpdateDestroyView",
+    "ReviewCreateAPIView",
+    "UserReviewsListAPIView",
+    "ReviewDeleteAPIView",
+    "CommentCreateAPIView",
+    "UserCommentListAPIView",
+    "CommentDeleteAPIView",
+    "StoryCreateAPIView",
+    "StoryListAPIView",
+    "StoryRetrieveAPIView",
+    "StoryUpdateAPIView",
+    "StoryDeleteAPIView",
+]
 
 
 
